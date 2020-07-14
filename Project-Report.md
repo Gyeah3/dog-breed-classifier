@@ -19,18 +19,17 @@ Pytorch will be the main machine learning (ML) library used for this project. Th
 
 We are going to detect the human faces and dog faces in the image datasets by converting the images into numpy arrays.
 
-
-![](screenshot/image0.png)
+![](https://raw.githubusercontent.com/Gyeah3/dog-breed-classifier-udacity/master/screenshot/image0.png)
 
 We are going to use openCV's implementation to detect the faces in the datasets. openCV provides many pre-trained face detectors and we are going to download one such detector in the harrcascades directory.
 
 
-![](screenshot/image1.png)
+![](https://raw.githubusercontent.com/Gyeah3/dog-breed-classifier-udacity/master/screenshot/image1.png)
 
 Then we write a function which returns **true** on detecting human face.
 
 
-![](screenshot/image2.png)
+![](https://raw.githubusercontent.com/Gyeah3/dog-breed-classifier-udacity/master/screenshot/image2.png)
 
 ## Detect Dogs
 
@@ -39,7 +38,7 @@ To detect the dogs, we are going to use a pre-trained model, in this case VGG-16
 Images needs to be pre-processed to tensors before being passed to a neural network, the process_image function below handles this task.
 
 
-![](screenshot/image4.png)
+![](https://raw.githubusercontent.com/Gyeah3/dog-breed-classifier-udacity/master/screenshot/image4.png)
 
 ## Creating a CNN to classify the dog breeds
 
@@ -51,7 +50,7 @@ To reduce training time without sacrificing accuracy, we show you how to train a
 
 Bottleneck features are implemented on pre-trained CNN. I picked ResNet as a transfer model because it performed outstanding on Image Classification. I looked into the structure and functions of ResNet. The core idea of ResNet is introducing a so-called “identity shortcut connection” that skips one or more layers. I guess this prevents overfitting when it's trainin
 
-![](screenshot/image5.png)
+![](https://raw.githubusercontent.com/Gyeah3/dog-breed-classifier-udacity/master/screenshot/image5.png)
 
 
 ##Train and test the model
@@ -59,7 +58,7 @@ Bottleneck features are implemented on pre-trained CNN. I picked ResNet as a tra
  Since this is a classification problem with no catastrophic consequences for getting a prediction wrong, we will be using accuracy as our evaluation metrics. It is the ratio of number of correct predictions to the total number of input samples. Accuracy an evaluation metric works well for a balanced dataset which happens to be the case for the dataset for this project.
  We train and test the model. DUring the training we run 10 epochs and the save the model with the lowest validation loss for a better accuracy.
  
- ![](screenshot/image6.png)
+ ![](https://raw.githubusercontent.com/Gyeah3/dog-breed-classifier-udacity/master/screenshot/image6.png)
  
 ## Writing our algorithm
 
@@ -70,14 +69,14 @@ Write an algorithm that accepts a file path to an image and first determines whe
     if neither is detected in the image, provide an output that indicates an error.
     
 
-![](screenshot/image7.png)
+![](https://raw.githubusercontent.com/Gyeah3/dog-breed-classifier-udacity/master/screenshot/image7.png)
 
 ## Testing the algorithm
 
 Now that we have trained our CNN model and written an algorithm to specify the file path to an image to determine what the image contains, now it's time to test the algorithm and see some interesting results.
 
 
-![](screenshot/image8.png)
+![](https://raw.githubusercontent.com/Gyeah3/dog-breed-classifier-udacity/master/screenshot/image8.png)
 
 ## Conclusion and possible improvements
 
